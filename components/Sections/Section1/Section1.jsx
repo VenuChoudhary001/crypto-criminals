@@ -3,13 +3,15 @@ import Image from "next/image";
 import Navbar from "../../Navbar";
 import Hero from "./Hero";
 const Section1 = () => {
+  const [load,setLoad]=React.useState(false);
   return (
     <>
-      <section className="relative font-urbanist">
+      <div className="relative font-urbanist">
         <Image
           src={"/images/hero-bg.svg"}
           layout="fill"
           priority
+          onLoad={()=>{}}
           objectFit="cover"
           alt=""
         />
@@ -18,7 +20,7 @@ const Section1 = () => {
           <Navbar />
           <Hero />
         </div>
-      </section>
+      </div>
     </>
   );
 };

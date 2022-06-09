@@ -5,7 +5,7 @@ const Section4 = () => {
     const {magic,noMagic}=React.useContext(GLOBAL_CONTEXT);
   return (
     <>
-      <section className=" sec4 ">
+      <div className=" sec4 ">
         <div className="overlay">
           <div className="container pt-4 grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col space-y-10">
@@ -36,7 +36,7 @@ const Section4 = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

@@ -8,7 +8,7 @@ const Section5 = () => {
      
   return (
     <>
-      <section className=" sec5 ">
+      <div className=" sec5 ">
         <div className="overlay">
           <div className="container pt-4 grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col space-y-10">
@@ -87,7 +87,7 @@ const Section5 = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

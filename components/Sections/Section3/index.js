@@ -28,7 +28,7 @@ const Section3 = () => {
 
   return (
     <>
-      <section className="container flex flex-col space-y-4">
+      <div className="container flex flex-col space-y-4">
         <div className="lg:text-6xl text-5xl font-bold text-white text-center">
           ROAD<span className="text-secondary">MAP</span>
         </div>
@@ -43,7 +43,7 @@ const Section3 = () => {
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </>
   );
 };

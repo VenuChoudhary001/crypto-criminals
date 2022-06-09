@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { DragControls, motion ,useAnimation} from "framer-motion";
 import React from 'react';
-function Button({placeholder,icon,action}){
+function Button({placeholder,icon}){
     const [flag,setFlag]=React.useState(false);
     const control=useAnimation();
 
@@ -25,7 +25,7 @@ function Button({placeholder,icon,action}){
           onMouseLeave={() => setFlag(false)}
           className="btn m-auto lg:m-1 mt-6 text-white"
           whileTap={{scale:0.9, transition:{ type: "spring", stiffness: 1000 }}}
-          onClick={action|| null}
+          // onClick={action|| null}
         >
           <motion.div
             variants={variant}

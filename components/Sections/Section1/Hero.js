@@ -9,8 +9,8 @@ function Hero() {
 
   return (
     <>
-      <div className="container justify-items-center text-center lg:text-left  relative hero grid  grid-cols-1 lg:grid-cols-2 items-center  text-white ">
-        <motion.div
+      <div className="container md:h-[750px] justify-items-center text-center lg:text-left  relative hero grid  grid-cols-1 lg:grid-cols-2 items-center  text-white ">
+        {/* <motion.div
           animate={{ y: [-20, 0, -20] }}
           transition={{
             duration: 3,
@@ -27,7 +27,7 @@ function Hero() {
             priority
             alt=""
           />
-        </motion.div>
+        </motion.div> */}
         <motion.div className=" mt-12 lg:mt-0 flex flex-col lg:gap-4 gap-6 ">
           <div
             onMouseEnter={magic}
@@ -39,7 +39,7 @@ function Hero() {
           <div
             onMouseEnter={magic}
             onMouseLeave={noMagic}
-            className="font-bold md:font-bold text-6xl md:text-6xl lg:text-4xl xl:text-5xl 2xl:text-7xl"
+            className="font-bold md:font-bold text-4xl md:text-6xl lg:text-4xl xl:text-5xl 2xl:text-7xl"
           >
             CRYPTO <span className="text-secondary">CRIMINALS</span>
           </div>
@@ -51,7 +51,7 @@ function Hero() {
           <Button placeholder={"mint your criminals now"} />
         </motion.div>
         <motion.div
-          className="hidden sm:block"
+          className="sm:block"
           animate={{ y: [-20, 0, -20] }}
           transition={{
             duration: 3,
@@ -61,7 +61,7 @@ function Hero() {
           <Image
             src="/images/hero.svg"
             width={800}
-            height={600}
+            height={500}
             layout="intrinsic"
             objectFit="contain"
             priority

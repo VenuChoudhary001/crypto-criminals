@@ -4,9 +4,9 @@ import ReactPlayer from "react-player/lazy";
 import Button from "../../Button";
 
 const Section2 = () => {
-  const navigate = () => {
-    window.location.assign("https://discord.com/invite/tXG6jHkp9u");
-  };
+  // const navigate = () => {
+  //   window.location.assign("https://discord.com/invite/tXG6jHkp9u");
+  // };
 
   return (
     <>
@@ -23,12 +23,12 @@ const Section2 = () => {
             />
           </div>
           <div className="flex flex-col space-y-6">
-            <div className="font-bold pl-2 text-5xl text-center lg:text-left lg:text-5xl">
+            <div className="font-bold pl-2 text-4xl text-center lg:text-left lg:text-5xl">
               A CRYPTO{" "}
               <span className="text-secondary font-bold">CRIMINAL</span>{" "}
               PRESENTATION
             </div>
-            <div className="p-6 lg:p-0 h-[300px] lg:h-[400px]">
+            <div className="p-6 lg:p-0 h-[300px] lg:h-[300px]">
               <ReactPlayer
                 url={"https://youtu.be/P2rajmx044I"}
                 width="100%"
@@ -37,9 +37,9 @@ const Section2 = () => {
             </div>
           </div>
         </div>
-        <div className="container flex justify-center">
+        <div className="container mt-6 flex justify-center">
           <Button
-            action={navigate}
+            // action={navigate}
             placeholder={"JOIN DISCORD"}
             icon={"/icons/discord.svg"}
           />
