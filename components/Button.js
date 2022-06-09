@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { motion} from "framer-motion";
+import { DragControls, motion ,useAnimation} from "framer-motion";
 import React from 'react';
-function Button(){
+function Button({placeholder,icon,action}){
     const [flag,setFlag]=React.useState(false);
-
+    const control=useAnimation();
 
     const variant = {
       hoverX: {
@@ -23,8 +23,9 @@ function Button(){
         <motion.div
           onMouseEnter={() => setFlag(true)}
           onMouseLeave={() => setFlag(false)}
-          className="btn m-auto lg:m-1 mt-6"
+          className="btn m-auto lg:m-1 mt-6 text-white"
           whileTap={{scale:0.9, transition:{ type: "spring", stiffness: 1000 }}}
+          onClick={action|| null}
         >
           <motion.div
             variants={variant}
@@ -46,8 +47,13 @@ function Button(){
             animate={flag ? "hoverY" : "initial"}
             className="b-right"
           ></motion.div>
-          <motion.button className="bg-secondary text-sm  max-w-max p-4 px-6 font-semibold h-12 md:h-14  lg:h-18 ">
-            MINT YOUR CRIMINALS
+          <motion.button 
+          whileHover={control.start({rotate:["0deg","360deg" , "540deg , 720deg"]})} 
+          className="bg-secondary flex items-center gap-4 uppercase box-border text-sm text-white max-w-max p-4 px-6 font-bold h-12 md:h-14  lg:h-18 ">
+           {icon && <motion.div animate={control}>
+               <Image src={icon} width={24} height={24} layout='intrinsic' objectFit='contain' alt='' />
+               </motion.div>}
+           {placeholder}
             <Image
               src={"/icons/Arrow.svg"}
               width={50}

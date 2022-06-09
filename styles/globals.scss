@@ -1,10 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-   cursor: none;
-   
+
+@layer base {
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+    border-width: 0px;
+    border-color: none;
+    border-style: none;
+  }
 }
+
+* {
+  cursor: none;
+}
+
 html,
 body {
   background-color: #000311;
@@ -13,6 +25,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-family: "Urbanist", sans-serif;
+  overflow-x: hidden;
 }
 .cursor {
   position: fixed;
@@ -45,8 +58,6 @@ body {
   width: 100vw;
   object-fit: cover;
   cursor: none;
-
-  
 }
 
 .overlay {
@@ -59,36 +70,120 @@ body {
   padding: 10px;
   max-width: fit-content;
   position: relative;
+  .b-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    border-top: 3px solid rgb(220, 60, 68);
+  }
+  .b-left {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    left: 0;
+    border-left: 3px solid #dc3c44;
+  }
+  .b-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 3px;
+    border-bottom: 3px solid #dc3c44;
+  }
+  .b-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    border-right: 3px solid #dc3c44;
+  }
 }
-.b-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 3px;
-  border-top: 3px solid rgb(220, 60, 68);
+
+// -------------------------ROADMAP-----------
+$black: #586173;
+$white: #ffffff;
+.road-map {
+  min-width: 200px;
+  max-width: 700px;
+  margin: auto;
+  .road-map-item {
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #dc3c44 0%, #ef0dcb 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    counter-increment: section;
+    position: relative;
+    color: $black;
+
+    //numbers
+    &:before {
+      content: counter(section);
+      position: absolute;
+      border-radius: 50%;
+      padding: 10px;
+      height: 1.25em;
+      width: 1.25em;
+      background-color: #dc3c44;
+      text-align: center;
+      line-height: 1.25em;
+      color: $white;
+      font-size: 1em;
+    }
+  }
 }
-.b-left {
-  position: absolute;
-  top: 0;
-  height: 50%;
-  left: 0;
-  border-left: 3px solid #dc3c44;
+//odd number borders
+.road-map-item:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+
+  &:before {
+    left: 100%;
+    margin-left: -20px;
+  }
 }
-.b-bottom {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 3px;
-  border-bottom: 3px solid #dc3c44;
+//even number borders
+.road-map :nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+
+  &:before {
+    right: 100%;
+    margin-right: -20px;
+  }
 }
-.b-right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 50%;
-  border-right: 3px solid #dc3c44;
+//handle first and last
+.road-map :first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.road-map :last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 
+// -----------------Section4--------
+.sec4 , .sec5{
+  background: url('../public/images/sec4.svg') no-repeat center/cover;
+  width: 100%;
+  padding:0 20;
+  height: fit-content;
+  .overlay{
+     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000311 91.06%);
+    height:max-content;
+    width: 100vw;
+  }
+}
+
+.sec5{
+  background: url('../public/images/sec5.svg') no-repeat center/cover;
+   .overlay{
+     background: linear-gradient(0.86deg, #000311 1.83%, rgba(0, 0, 0, 0.63) 48.58%, #000311 101.78%);
+   }
+}
