@@ -14,7 +14,7 @@ const Section2 = () => {
         <div className=" grid grid-cols-1 lg:grid-cols-2">
           <div className="hidden lg:block">
             <Image
-              src={"/images/hero2.svg"}
+              src={"/images/hero2.png"}
               layout={"intrinsic"}
               objectFit="contain"
               width={600}

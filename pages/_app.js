@@ -1,5 +1,6 @@
 import '../styles/globals.scss'
 import Layout from '../layout'
+import Head from 'next/head';
 
 
 function MyApp(obj) {
@@ -7,13 +8,16 @@ function MyApp(obj) {
   if(!Component){
     return <></>
   }
-  return <>
-  <Layout>
-
-  <Component  {...pageProps} />
- 
-  </Layout>
-  </>
+  return (
+    <>
+      <Head>
+        <title>Cryptocriminals NFT Metaverse - No Face No Case</title>
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
 }
 
 export default MyApp

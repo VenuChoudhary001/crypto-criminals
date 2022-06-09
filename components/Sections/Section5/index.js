@@ -30,7 +30,7 @@ const Section5 = () => {
             </div>
             <div className="">
               <Image
-                src="/images/sec5-hero.svg"
+                src="/images/sec5-hero.png"
                 layout={"intrinsic"}
                 objectFit="contain"
                 width={600}

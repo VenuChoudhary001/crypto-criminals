@@ -3,17 +3,16 @@ import Image from "next/image";
 import Navbar from "../../Navbar";
 import Hero from "./Hero";
 const Section1 = () => {
-  const [load,setLoad]=React.useState(false);
   return (
     <>
       <div className="relative font-urbanist">
         <Image
-          src={"/images/hero-bg.svg"}
+          src={"/images/hero-bg.jpg"}
           layout="fill"
-          priority
+          priority={true}
           onLoad={()=>{}}
           objectFit="cover"
-          alt=""
+          alt="Cryptocriminals"
         />
 
         <div className="overlay relative">

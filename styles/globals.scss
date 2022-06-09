@@ -53,7 +53,7 @@ body {
 }
 
 .home-bg {
-  background: url("../public/images/hero-bg.svg") no-repeat center/cover;
+  background: url("../public/images/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   width: 100vw;
   object-fit: cover;
@@ -170,7 +170,7 @@ $white: #ffffff;
 
 // -----------------Section4--------
 .sec4 , .sec5{
-  background: url('../public/images/sec4.svg') no-repeat center/cover;
+  background: url('../public/images/sec4.jpg') no-repeat center/cover;
   width: 100%;
   padding:0 20;
   height: fit-content;
@@ -182,7 +182,7 @@ $white: #ffffff;
 }
 
 .sec5{
-  background: url('../public/images/sec5.svg') no-repeat center/cover;
+  background: url('../public/images/sec5.jpg') no-repeat center/cover;
    .overlay{
      background: linear-gradient(0.86deg, #000311 1.83%, rgba(0, 0, 0, 0.63) 48.58%, #000311 101.78%);
    }

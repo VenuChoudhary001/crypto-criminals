@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="text-offWhite font-bold text-3xl">As seen on</div>
             <div>
               <Image
-                src="/images/footer.svg"
+                src="/images/footer.jpg"
                 width={200}
                 height={200}
                 objectFit="contain"
