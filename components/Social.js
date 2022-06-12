@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-const Social = ({style}) => {
+const Social = () => {
   return (
     <>
-      <div className={`social flex flex-${style} gap-4 `}>
+      <div className={` flex gap-4 md:gap-6 `}>
         <div>
           <Image
             className="cursor-pointer"
