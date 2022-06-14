@@ -1,18 +1,15 @@
 import React from "react";
-import Image from "next/image";
 
 const Section2 = () => {
   return (
     <>
-      <div className="giveaway relative min-h-[200px] flex flex-col items-center bg-secondary">
+      <div className="giveaway text-white relative min-h-[150px] flex flex-col items-center bg-secondary">
         <div className="container relative  ">
-          <div className="give_banner">
-            <Image src="/images/silh.png" objectFit="contain" width={280} height={422} layout='responsive' alt=""/>
-          </div>
-          <div className="grid grid-cols-1  gap-2 items-center sm:grid-cols-3">
-            <div className=""></div>
+         
+          <div className="grid grid-cols-1  gap-2 items-center sm:grid-cols-2">
+          
             <div className="flex justify-center items-end sm:items-start flex-col">
-              <div className="font-oswald font-bold md:font-normal md:font-anton text-3xl sm:text-5xl lg:text-6xl">GIVEAWAYS</div>
+              <div className="font-oswald font-bold md:font-normal  text-3xl sm:text-5xl lg:text-6xl">GIVEAWAYS</div>
               <div className="font-raleway   max-w-[200px] text-right sm:text-left sm:max-w-[400px] font-bold text-sm lg:text-lg">
                 Click here to participate in the next giveaway
               </div>

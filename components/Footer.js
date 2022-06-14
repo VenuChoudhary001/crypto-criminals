@@ -5,30 +5,28 @@ import Social from './Social';
 const Footer = () => {
   return (
     <>
-     <div className=" w-full">
-      
-     </div>
-      <div className="container h-[360px] pb-2 flex flex-col space-y-5 ">
-        <div className="container h-[1px] bg-secondary"></div>
+     
+      <div className="container  py-4 flex flex-col space-y-5 ">
+       
         <div className="gap-20   grid grid-cols-1 md:grid-cols-3 ">
           <main className="flex flex-col space-y-8">
-            <div className="text-white  text-3xl">As seen on</div>
+            <div className="text-white  text-xl">As seen on</div>
             <div>
               <Image
                 src="/images/footer.jpg"
-                width={200}
-                height={200}
+                width={100}
+                height={100}
                 objectFit="contain"
                 alt=''
               />
             </div>
           </main>
           <main className="flex flex-col space-y-8">
-            <div className="text-white  text-3xl">Follow us on</div>
+            <div className="text-white  text-xl">Follow us on</div>
             <Social style={"row"} />
           </main>
         </div>
-        <div className="text-white  text-center">
+        <div className="text-white text-sm  text-center">
           {" "}
           2021 Crypto Criminals. All rights Reserved Golden Toupee // Production
           LLC.{" "}

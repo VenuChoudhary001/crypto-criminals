@@ -1,23 +1,32 @@
 import React from 'react'
 import { GLOBAL_CONTEXT } from '../../../layout';
-
+import Image from 'next/image';
 const Section4 = () => {
     const {magic,noMagic}=React.useContext(GLOBAL_CONTEXT);
   return (
     <>
-      <div className=" sec4 relative p-2 bg-secondary">
-          <div className="left_layer"></div>
-          <div className="right_layer"></div>
-          <div className="container pt-4 grid grid-cols-1 lg:grid-cols-2">
+      <div className=" sec4 relative  ">
+        
+          <Image
+            priority
+            src={"/images/cc21.png"}
+            layout="fill"
+            objectFit="cover"
+            className=""
+            alt=''
+          />
+        <div className="overlay relative ">
+
+          <div className="container  pt-4  grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col space-y-8 py-4">
               <div
                 onMouseEnter={magic}
                 onMouseLeave={noMagic}
-                className=" text-3xl font-oswald font-bold md:font-normal px-4 md:font-anton text-black md:text-5xl lg:text-6xl"
+                className=" text-3xl   md:font-normal  font-hazaru text-white md:text-5xl lg:text-6xl"
               >
-                THE POINT <span className="text-black">SYSTEM</span>{" "}
+                <span className="text-secondary"> THE</span> POINT SYSTEM{" "}
               </div>
-              <div className="text-black px-3 font-raleway font-medium text-[14px]  md:text-lg lg:text-[16px] ">
+              <div className="text-white  px-3 font-urbanist  font-bold text-[16px]  md:text-lg lg:text-[16px] ">
                 If you collect ten points, you can mint a new Crypto Criminal!
                 We will unlock this feature approximately 30 days after the
                 completion of the public sale. If you were whitelisted during
@@ -36,7 +45,7 @@ const Section4 = () => {
               </div>
             </div>
           </div>
-     
+        </div>
       </div>
     </>
   );

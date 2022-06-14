@@ -7,8 +7,9 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FF0000",
-        secondary: "#CFEC08",
-        dark:"rgba(0 0 0 / 0.45)"
+        secondary: "#DF0431",
+        dark: "rgba(0 0 0 / 0.45)",
+        lightBlue: "#0566C2",
       },
       fontFamily: {
         urbanist: ["Urbanist", "sans-serif"],

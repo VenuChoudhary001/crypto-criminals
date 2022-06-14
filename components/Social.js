@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 const Social = () => {
   return (
@@ -9,8 +8,8 @@ const Social = () => {
           <Image
             className="cursor-pointer"
             src={"/icons/twitter.svg"}
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             objectFit="contain"
             layout="intrinsic"
             alt=""
@@ -19,8 +18,8 @@ const Social = () => {
         <div>
           <Image
             src={"/icons/instagram.svg"}
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             objectFit="contain"
             layout="intrinsic"
             alt=""
@@ -29,8 +28,8 @@ const Social = () => {
         <div>
           <Image
             src={"/icons/tiktok.svg"}
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             objectFit="contain"
             layout="intrinsic"
             alt=""
@@ -39,8 +38,8 @@ const Social = () => {
         <div>
           <Image
             src={"/icons/opensea.svg"}
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             objectFit="contain"
             layout="intrinsic"
             alt=""
@@ -49,8 +48,8 @@ const Social = () => {
         <div>
           <Image
             src={"/icons/discord.svg"}
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             objectFit="contain"
             layout="intrinsic"
             alt=""

@@ -6,9 +6,9 @@ const Section3 = () => {
   return (
     <>
       <div className="container flex flex-col gap-10">
-        <div className="text-3xl font-oswald md:text-7xl space-y-2 text-white max-w-max md:font-anton">
+        <div className="text-3xl  md:text-7xl space-y-2 text-white max-w-max font-hazaru">
           ROAD<span className="text-secondary">MAP</span>
-          <div className=" relative line h-[10px] border-t-2 border-t-secondary  border-solid"></div>
+          {/* <div className=" relative line h-[10px] border-t-2 border-t-secondary  border-solid"></div> */}
         </div>
         <div className="flex flex-col items-center justify-center">
           <Card />

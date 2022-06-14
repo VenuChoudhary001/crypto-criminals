@@ -9,7 +9,7 @@ const Card = () => {
         phase i
       </div>
 
-      <div className="font-raleway text-[14px] font-medium md:text-[16px] relative pl-2 ">
+      <div className="font-raleway text-white text-[16px] font-medium md:text-[16px] relative pl-2 ">
         {` The sale of 3333 Crypto Criminal NFTs available for 0.069 ETH. Upon
         completion of our 3rd sale three NFT owners will win a Playstation 5
         and an Apple iPhone 13. One owner will be selected to join the Crypto
