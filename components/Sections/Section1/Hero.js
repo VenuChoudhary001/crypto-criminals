@@ -3,7 +3,6 @@ import Button from "../../Button";
 import { motion } from "framer-motion";
 import { GLOBAL_CONTEXT } from "../../../layout";
 import  GlitchedWriter ,{wait,presets} from 'glitched-writer'
-import Image from "next/image";
 function Hero() {
   const { magic, noMagic } = React.useContext(GLOBAL_CONTEXT);
   const ref=React.useRef(null);

@@ -5,9 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap');
-@import "swiper/css/bundle";
-@import "swiper/css";
-@import "swiper/css/pagination";
 @layer base {
   *,
   ::after,
@@ -145,7 +142,6 @@ body {
   }
   .player{
     background:linear-gradient(180deg, rgba(7, 7, 7, 0.249) 0%, #010101 100%) , url(../public/images/v1.png) no-repeat center/cover  ;
-    // background-blend-mode: m;
   }
 }
 

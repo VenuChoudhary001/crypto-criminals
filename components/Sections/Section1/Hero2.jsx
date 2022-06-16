@@ -28,6 +28,7 @@ const Hero2 = () => {
                 height={122}
                 layout="intrinsic"
                 objectFit="contain"
+                alt=''
               />
             </motion.div>
             <motion.div initial={{ x: 2000 }} animate={{ x: 0 }} className="">

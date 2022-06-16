@@ -19,6 +19,7 @@ const Section2 = () => {
           objectFit="cover"
           className=""
           layout="intrinsic"
+          alt=""
           />
           </div>
          </div>
@@ -29,6 +30,7 @@ const Section2 = () => {
            width={48}
            height={48}
            layout="intrinsic"
+           alt=""
            />
          
          </div>
