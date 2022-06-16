@@ -1,48 +1,40 @@
+import Image from "next/image";
 import React from "react";
+import Button from "../../Button";
 
 const Section2 = () => {
   return (
     <>
-      <div className="giveaway text-white relative min-h-[150px] flex flex-col items-center bg-secondary">
-        <div className="container relative  ">
-         
-          <div className="grid grid-cols-1  gap-2 items-center sm:grid-cols-2">
-          
-            <div className="flex justify-center items-end sm:items-start flex-col">
-              <div className="font-oswald font-bold md:font-normal  text-3xl sm:text-5xl lg:text-6xl">GIVEAWAYS</div>
-              <div className="font-raleway   max-w-[200px] text-right sm:text-left sm:max-w-[400px] font-bold text-sm lg:text-lg">
-                Click here to participate in the next giveaway
-              </div>
-            </div>
-            <div className="flex justify-end h-full   gap-4">
-              <div className="flex flex-col  items-center gap-1">
-                <div className=" bg-black flex box flex-col items-center justify-center font-oswald text-white text-2xl sm:text-4xl lg:text-3xl ">
-                  12
-                </div>
-                <div className="font-oswald font-bold  lg:text-xl ">
-                  DAYS
-                </div>
-              </div>
-              <div className="flex flex-col items-center  gap-1">
-                <div className=" bg-black flex flex-col box items-center justify-center font-oswald text-white text-2xl sm:text-4xl lg:text-3xl">
-                  12
-                </div>
-                <div className="font-oswald font-bold lg:text-xl ">
-                  HOURS
-                </div>
-              </div>{" "}
-              <div className="flex flex-col items-center gap-1">
-                <div className=" bg-black font-oswald flex box flex-col items-center justify-center text-white text-2xl sm:text-4xl lg:text-3xl">
-                  59
-                </div>
-                <div className="font-oswald font-bold lg:text-xl ">
-                  MINUTES
-                </div>
-              </div>
-            </div>
+    <div className="container">
+
+      <div className="inner-container p-3 over relative flex flex-col rounded-xl overflow-hidden items-center  gap-6 w-full sec2">
+         <div className="flex relative items-center banner min-h-[150px] max-w-[600px] py-4 w-full ">
+          <div className="text-white font-bo font-witches z-20 text-4xl">WELCOME TO CRYPTO CRIMINALS</div>
+          <div className="absolute -top-150 right-0">
+
+          <Image 
+          src={'/images/side_img.png'}
+          width={203}
+          height={181}
+          objectFit="cover"
+          className=""
+          layout="intrinsic"
+          />
           </div>
-        </div>
+         </div>
+         <div className="p-4 max-w-[600px] min-w-[300px] w-full player flex items-center justify-center text-lg text-white h-[280px] rounded-md bg-black">
+
+
+           <Image src={'/icons/youtube.svg'}
+           width={48}
+           height={48}
+           layout="intrinsic"
+           />
+         
+         </div>
+         <Button placeholder={'join discord'} icon={'/icons/discord.svg'} />
       </div>
+    </div>
     </>
   );
 };

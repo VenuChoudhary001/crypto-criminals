@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap');
+@import "swiper/css/bundle";
+@import "swiper/css";
+@import "swiper/css/pagination";
 @layer base {
   *,
   ::after,
@@ -22,7 +25,10 @@
   font-family:'Hazaru';
   src:local('Hazaru') , url(../public/fonts/Aquire-BW0ox.otf);
 }
-
+@font-face {
+  font-family: 'Witches';
+  src:local('Witches') , url(../public/fonts/Madrigal-mLJ92.woff);
+}
 html,
 body {
   background-color: #000;
@@ -57,80 +63,45 @@ body {
     margin: auto;
   }
 }
-.sec5{
-  background: url(../public/images/t.jpg) no-repeat center/cover;
-  background-attachment: fixed;
- 
-     &::after{
-    content: '';
-     position: absolute;
-     bottom: -10px;
-     left: 0;
-     width: 100%;
-     height: 60px;
-     background: url(../public/images/layer_bottom.svg) no-repeat center/cover;
-     z-index: 30;
-    }
+
+.inner-container{
+  max-width: 80vw;
+  margin: auto;
 }
 .overlay {
-  background: linear-gradient(179.95deg, rgba(0, 0, 0, 0.19) 3.29%, rgba(0, 0, 0, 0.53) 30.03%, #000000 99.96%);
+  background: linear-gradient(179.95deg, rgba(0, 0, 0, 0.19) 3.29%, rgba(0, 0, 0, 0.53) 30.03%, #000000d3 99.96%);
   padding: 4rem 0;
 }
-.sec4{
-   &::after{
-    content: '';
-     position: absolute;
-     bottom: -2px;
-     left: 0;
-     width: 100vw;
-     height: 20px;
-     z-index: 20;
-     background: url(../public/images/razor-bottom-black-1886097f.svg);
-   }
 
- 
-  
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+.hero {
+  font-size: clamp(40px, 10vw, 100px);
+  // display: inline-block;
+  color: #fff;
+  z-index: 2;
+  filter: drop-shadow(0 1px 3px);
 }
 
-
-
-
-
-.card{
-    &::after{
-    content: '';
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 100vw;
-     height: 20px;
-     background: url(../public/images/razor-bottom-black-1886097f.svg);
-   }
-
-   &::before{
-     content: '';
-     position: absolute;
-     top: -2px;
-     left: 0;
-     width: 100vw;
-     height: 20px;
-     background: url(../public/images/card_top.svg);
-   }
-
-   .card-left{
+.sec-1{
+  &::before{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 2px;
-    height: 200px;
-    background: url(../public/images/card_side_left.svg) no-repeat center/cover;
-   }
-}
+    width: 100vw;
+    height: 100%;
+    background: url(../public/images/pok-t.png) no-repeat center/cover;
+    background-attachment: fixed;    
 
-.anim-glitch{
    animation: glitch 10s infinite ease-in-out;
-  // filter: hue-rotate(90deg);
   @keyframes glitch {
      0%{
       filter: hue-rotate(0deg);
@@ -147,23 +118,34 @@ body {
      100%{
       filter: hue-rotate(720deg);
      }
+  
+}
+  }
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  
+}
+.over{
+    background: linear-gradient(180deg, rgba(171, 169, 169, 0) 0%, #010101 100%);
+    z-index: 20;
+  }
+.sec2{
+  z-index: 10;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:url(../public/images/check-t.png);
+    z-index: -1;
+    
+  }
+  .player{
+    background:linear-gradient(180deg, rgba(7, 7, 7, 0.249) 0%, #010101 100%) , url(../public/images/v1.png) no-repeat center/cover  ;
+    // background-blend-mode: m;
   }
 }
-.player{
-  width: 90vw;
-  height: clamp(300px,370px,450px);
-  max-width:clamp(250px ,650px , 700px);
-}
-
-
-// ----------------------------------------------------------------
-.hero {
-  font-size: clamp(40px, 10vw, 100px);
-  display: inline-block;
-  color: #fff;
-  z-index: 2;
-  filter: drop-shadow(0 1px 3px);
-}
-
-
 

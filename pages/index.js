@@ -7,6 +7,9 @@ import Section5 from "../components/Sections/Section5";
 import Footer from "../components/Footer";
 import { GLOBAL_CONTEXT } from "../layout";
 import GlitchedWriter, { wait, presets,} from "glitched-writer";
+import Section2 from "../components/Sections/Section2";
+
+
 function Home() {
  
   const [show,setShow]=React.useState({
@@ -41,27 +44,27 @@ React.useEffect(() => {
   go();
 }, []);
 
-  // if(!show.page){
-  //   return (
-  //     <>
-  //       <div
-  //         onMouseEnter={magic}
-  //         onMouseLeave={noMagic}
-  //         className="font-hazaru relative flex flex-col items-center justify-center  text-center h-screen  tracking-wide font-thin text-5xl sm:text-6xl  md:text-8xl lg:text-9xl "
-  //       >
-  //         <Image
-  //         src='/icons/logo.svg'
-  //         width={200}
-  //         height={200}
-  //         layout={"intrinsic"}
-  //         objectFit="contain"
-  //         alt=""
-  //         />
-  //         <div className="hero" ref={ref}></div>
-  //       </div>
-  //     </>
-  //   );
-  // }
+  if(!show.page){
+    return (
+      <>
+        <div
+          onMouseEnter={magic}
+          onMouseLeave={noMagic}
+          className="font-hazaru relative flex flex-col items-center justify-center  text-center h-screen  tracking-wide font-thin text-5xl sm:text-6xl  md:text-8xl lg:text-9xl "
+        >
+          <Image
+          src='/icons/logo.svg'
+          width={200}
+          height={200}
+          layout={"intrinsic"}
+          objectFit="contain"
+          alt=""
+          />
+          <div className="hero" ref={ref}></div>
+        </div>
+      </>
+    );
+  }
    
   return (
     <>
@@ -69,9 +72,10 @@ React.useEffect(() => {
       <section className="grid grid-rows auto-rows-auto   ">
 
         <Section1/>
-        <Section5/>
-        <Section3/>
-        <Section4/>
+        <Section2/>
+        {/* <Section5/> */}
+        {/* <Section3/> */}
+        {/* <Section4/> */}
        
         <Footer/>
        </section>

@@ -3,12 +3,13 @@ import Button from "../../Button";
 import { motion } from "framer-motion";
 import { GLOBAL_CONTEXT } from "../../../layout";
 import  GlitchedWriter ,{wait,presets} from 'glitched-writer'
+import Image from "next/image";
 function Hero() {
   const { magic, noMagic } = React.useContext(GLOBAL_CONTEXT);
   const ref=React.useRef(null);
   const ref2=React.useRef(null);
   React.useEffect(() => {
-    console.clear();
+    // console.clear();
     const writer = new GlitchedWriter(
       ref.current,
       { ...presets.encrypted },
@@ -29,8 +30,8 @@ function Hero() {
 
   return (
     <>
-      <div className="container h-screen flex items-center justify-cente  relative  text-white ">
-        <motion.div className=" mt-12 relative  lg:mt-0 flex flex-col justify-center items-centr lg:gap-4 gap-4 ">
+      <div className="container min-h-screen flex items-center flex-col md:flex-row  relative  text-white ">
+        <motion.div className=" mt-12 relative  lg:mt-0 flex flex-col justify-center lg:gap-4 gap-4 ">
           <div
             onMouseEnter={magic}
             onMouseLeave={noMagic}
@@ -39,11 +40,12 @@ function Hero() {
           >
            {/* CRYPTO CRIMINALS */}
           </div>
-          <div ref={ref2} className="font-bold font-urbanist max-w-[800px]   md:text-2xl ">
+          <div ref={ref2} className="font-bold font-urbanist max-w-[800px]    md:text-2xl ">
            
           </div>
           <Button placeholder={"mint your criminals now"} />
         </motion.div>
+        
       </div>
     </>
   );

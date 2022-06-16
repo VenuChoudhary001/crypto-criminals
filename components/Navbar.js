@@ -5,15 +5,15 @@ const Navbar = () => {
   const { magic, noMagic } = React.useContext(GLOBAL_CONTEXT);
   return (
     <>
-    <div className="bg-dark  z-50 fixed w-full top-0 left-0 ">
+    <div className="  z-50 fixed w-full top-0 left-0 ">
 
       <div className="container  flex items-center justify-between">
         
         <Image
           src={"/icons/logo.svg"}
           priority
-          width={60}
-          height={60}
+          width={80}
+          height={80}
           objectFit="contain"
           layout="intrinsic"
           alt=""

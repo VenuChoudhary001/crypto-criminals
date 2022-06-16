@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FF0000",
-        secondary: "#DF0431",
+        secondary: "#DB0F4C",
         dark: "rgba(0 0 0 / 0.45)",
         lightBlue: "#0566C2",
       },
@@ -17,6 +17,7 @@ module.exports = {
         anton: ["Anton"],
         oswald: ["Oswald"],
         hazaru: ["Hazaru", "Anton", "sans-serif"],
+        witches: ["witches"],
       },
     },
   },
