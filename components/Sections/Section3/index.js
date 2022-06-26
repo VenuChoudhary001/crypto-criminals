@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../Card";
+
 
 const Section3 = () => {
  
@@ -11,7 +11,7 @@ const Section3 = () => {
           {/* <div className=" relative line h-[10px] border-t-2 border-t-secondary  border-solid"></div> */}
         </div>
         <div className="flex flex-col items-center justify-center">
-          <Card />
+   
         </div>
         <div className="md:flex hidden text-lg justify-evenly">
           <div className="text-white font-oswald border-t-2 border-b-2 border-secondary border-solid">

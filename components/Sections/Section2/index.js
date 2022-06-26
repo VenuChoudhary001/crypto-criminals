@@ -1,42 +1,205 @@
 import Image from "next/image";
 import React from "react";
-import Button from "../../Button";
+import CircularButton from "../../Button";
+const ROADMAP = [
+  {
+    title: "PHASE I",
+    desc: [
+      "1.Finalization of all NFT artwork and successful upload to IPFS",
+      "2.Video series of the Crypto Criminals founders.  Available on our website and youtube.",
+      "3.Launch of the smart contract",
+      "4.NFT pre-sale for whitelisted members.",
+    ],
+  },
+  {
+    title: "PHASE II",
+    desc: [
+      "1.Public sale goes live.  Crypto Criminals are available for .08 ETH. Minting is available on our website. ",
+      "2.Secondary sales on Opensea @Crypto Criminals Official.  ",
+    ],
+  },
+];
 
 const Section2 = () => {
   return (
     <>
-    <div className="container">
-
-      <div className="inner-container p-3 over relative flex flex-col rounded-xl overflow-hidden items-center  gap-6 w-full sec2">
-         <div className="flex relative items-center banner min-h-[150px] max-w-[600px] py-4 w-full ">
-          <div className="text-white font-bo font-witches z-20 text-4xl">WELCOME TO CRYPTO CRIMINALS</div>
-          <div className="absolute -top-150 right-0">
-
-          <Image 
-          src={'/images/side_img.png'}
-          width={203}
-          height={181}
-          objectFit="cover"
-          className=""
-          layout="intrinsic"
-          alt=""
-          />
+      <div className="grid gap-10">
+        <div className="container text-white sec2 flex flex-col items-center justify-center gap-6">
+          <div className=" text-4xl lg:text-6xl font-bold opacity-50 text-primary tracking-[12px]">
+            ROADMAP
           </div>
-         </div>
-         <div className="p-4 max-w-[600px] min-w-[300px] w-full player flex items-center justify-center text-lg text-white h-[280px] rounded-md bg-black">
-
-
-           <Image src={'/icons/youtube.svg'}
-           width={48}
-           height={48}
-           layout="intrinsic"
-           alt=""
-           />
-         
-         </div>
-         <Button placeholder={'join discord'} icon={'/icons/discord.svg'} />
+        </div>
+        <div className="timeline mt-4 flex flex-col lg:flex-row">
+          <div
+            className="tl-item "
+            style={{
+              background: "url(/images/phase-1.png) no-repeat center/cover",
+            }}
+          >
+            <div className="tl-year">
+              <CircularButton placeholder={"Phase i"} />
+            </div>
+            <div className="tl-content">
+              <Image
+                src={"/images/longShot.png"}
+                layout="intrinsic"
+                width={360}
+                alt=""
+                height={200}
+                objectFit="contain"
+              />
+              <h1>Lorem ipsum dolor sit</h1>
+              <p className="text-[14px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>
+          <div
+            className="tl-item "
+            style={{
+              background: "url(/images/phase-2.png) no-repeat center/cover",
+            }}
+          >
+            <div className="tl-year">
+              <CircularButton placeholder={"Phase ii"} />
+            </div>
+            <div className="tl-content">
+              <Image
+                src={"/images/longShot.png"}
+                layout="intrinsic"
+                width={360}
+                alt=""
+                height={200}
+                objectFit="contain"
+              />
+              <h1>Lorem ipsum dolor sit</h1>
+              <p className="text-[16px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>{" "}
+          <div
+            className="tl-item "
+            style={{
+              background: "url(/images/phase-1.png) no-repeat center/cover",
+            }}
+          >
+            <div className="tl-year">
+              <CircularButton placeholder={"Phase iii"} />
+            </div>
+            <div className="tl-content">
+              <Image
+                src={"/images/longShot.png"}
+                layout="intrinsic"
+                width={360}
+                alt=""
+                height={200}
+                objectFit="contain"
+              />
+              <h1>Lorem ipsum dolor sit</h1>
+              <p className="text-[16px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>{" "}
+          <div
+            className="tl-item "
+            style={{
+              background: "url(/images/phase-2.png) no-repeat center/cover",
+            }}
+          >
+            <div className="tl-year">
+              <CircularButton placeholder={"Phase iv"} />
+            </div>
+            <div className="tl-content">
+              <Image
+                src={"/images/longShot.png"}
+                layout="intrinsic"
+                width={360}
+                alt=""
+                height={200}
+                objectFit="contain"
+              />
+              <h1>Lorem ipsum dolor sit</h1>
+              <p className="text-[16px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>{" "}
+          <div
+            className="tl-item "
+            style={{
+              background: "url(/images/phase-1.png) no-repeat center/cover",
+            }}
+          >
+            <div className="tl-year">
+              <CircularButton placeholder={"Phase v"} />
+            </div>
+            <div className="tl-content">
+              <Image
+                src={"/images/longShot.png"}
+                layout="intrinsic"
+                width={360}
+                alt=""
+                height={200}
+                objectFit="contain"
+              />
+              <h1>Lorem ipsum dolor sit</h1>
+              <p className="text-[16px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>{" "}
+          <div
+            className="tl-item "
+            style={{
+              background: "url(/images/phase-2.png) no-repeat center/cover",
+            }}
+          >
+            <div className="tl-year">
+              <CircularButton placeholder={"Phase vi"} />
+            </div>
+            <div className="tl-content">
+              <Image
+                src={"/images/longShot.png"}
+                layout="intrinsic"
+                width={360}
+                alt=""
+                height={200}
+                objectFit="contain"
+              />
+              <h1>Lorem ipsum dolor sit</h1>
+              <p className="text-[16px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </>
   );
 };

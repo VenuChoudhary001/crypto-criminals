@@ -41,32 +41,32 @@ React.useEffect(() => {
   go();
 }, []);
 
-  if(!show.page){
-    return (
-      <>
-        <div
-          onMouseEnter={magic}
-          onMouseLeave={noMagic}
-          className="font-hazaru relative flex flex-col items-center justify-center  text-center h-screen  tracking-wide font-thin text-5xl sm:text-6xl  md:text-8xl lg:text-9xl "
-        >
-          <Image
-          src='/icons/logo.svg'
-          width={200}
-          height={200}
-          layout={"intrinsic"}
-          objectFit="contain"
-          alt=""
-          />
-          <div className="hero" ref={ref}></div>
-        </div>
-      </>
-    );
-  }
+  // if(!show.page){
+  //   return (
+  //     <>
+  //       <div
+  //         onMouseEnter={magic}
+  //         onMouseLeave={noMagic}
+  //         className="font-hazaru relative flex flex-col items-center justify-center  text-center h-screen  tracking-wide font-thin text-5xl sm:text-6xl  md:text-8xl lg:text-9xl "
+  //       >
+  //         <Image
+  //         src='/icons/logo.svg'
+  //         width={200}
+  //         height={200}
+  //         layout={"intrinsic"}
+  //         objectFit="contain"
+  //         alt=""
+  //         />
+  //         <div className="hero" ref={ref}></div>
+  //       </div>
+  //     </>
+  //   );
+  // }
    
   return (
     <>
      
-      <section className="grid grid-rows auto-rows-auto   ">
+      <section className="grid grid-rows auto-rows-auto gap-10  ">
 
         <Section1/>
         <Section2/>
