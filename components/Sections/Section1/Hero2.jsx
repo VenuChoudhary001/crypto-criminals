@@ -1,26 +1,89 @@
 import Image from 'next/image';
 import React from 'react'
 import Button from '../../Button';
-import {motion} from 'framer-motion'
+import gsap from "gsap";
 const Hero2 = () => {
+   const [size,setSize]=React.useState({
+    x:280,
+    y:280
+   })
+   React.useEffect(() => {
+    if(window.innerWidth<600){
+      setSize({x:100,y:100})
+    }
+     window.scrollTo(0, 0); // Scrolls to top
+     gsap.from(".mask-3", {
+       y: 400,
+       opacity: 0.1,
+       duration: 2,
+       ease: "ease.out",
+     });
+     gsap.from(".mask-4", {
+       y: 300,
+       opacity: 0.1,
+       duration: 2,
+       ease: "ease.out",
+     });
+     
+
+    
+   }, []);
   return (
     <>
       <div className="container min-h-screen text-center flex items-center justify-center flex-col relative  text-white ">
         <div className=" mt-12 relative  lg:mt-0 flex flex-col justify-center ">
-          <div className="font-alpha font-medium  flex text-5xl sm:text-6xl items-center justify-center md:text-8xl lg:text-9xl ">
-           
-              CRYPTO
-           
-          
-              CRIMINALS
-          
+          <div
+            data-glitch="CRYPTO CRIMINALS"
+            className="font-alpha hero text-blac   font-medium  flex text-5xl sm:text-6xl items-center justify-center md:text-8xl lg:text-9xl "
+          >
+            CRYPTO CRIMINALS
           </div>
-          <div className="font-light  md:text-xl ">
+          <div className="font-medium text-[14px] md:text-xl ">
             11111 unique NFT Crypto Criminal masks worn by the outlaws of The
             Metaverse. No Face No Case.
           </div>
         </div>
         <Button placeholder={"mint your criminals now"} />
+        <div className="absolute bottom-0 hidden md:block">
+          <div className="relative block">
+            <Image
+              layout="intrinsic"
+              src={"/images/mask-3-founder.png"}
+              width={size.x}
+              height={size.y}
+              className="mask-3"
+            />
+            <Image
+              layout="intrinsic"
+              src={"/images/mask-4.png"}
+              width={size.x}
+              height={size.y}
+              className="mask-4"
+            />{" "}
+          </div>
+        </div>
+        <div className="absolute bottom-0 md:hidden block">
+          <div className="relative block">
+            {/* <div className="absolute left-0"> */}
+              <Image
+                layout="intrinsic"
+                src={"/images/mask-3.png"}
+                width={280}
+                height={200}
+                className="mask-3"
+                objectFit="contain"
+              />
+         
+            <Image
+              layout="intrinsic"
+              src={"/images/mask-4.png"}
+              width={280}
+              height={200}
+              className="mask-4"
+              objectFit="contain"
+            />{" "}
+          </div>
+        </div>
       </div>
     </>
   );

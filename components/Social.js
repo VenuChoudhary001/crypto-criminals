@@ -3,7 +3,7 @@ import React from "react";
 const Social = () => {
   return (
     <>
-      <div className={` flex gap-4 md:gap-6 `}>
+      <div className={` flex gap-4 md:gap-6 w-full justify-center`}>
         <div>
           <Image
             className="cursor-pointer"

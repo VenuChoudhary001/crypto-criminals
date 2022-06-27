@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import { GLOBAL_CONTEXT } from "../layout";
 import GlitchedWriter, { wait, presets,} from "glitched-writer";
 import Section2 from "../components/Sections/Section2";
+import Section3 from "../components/Sections/Section3";
+import Social from "../components/Social";
 
 
 function Home() {
@@ -66,13 +68,15 @@ React.useEffect(() => {
   return (
     <>
      
-      <section className="grid grid-rows auto-rows-auto gap-10  ">
+      <section className="home grid grid-rows auto-rows-auto gap-10  ">
 
         <Section1/>
         <Section2/>
+        <Section3/>
+        <Social/>
         <Footer/>
        </section>
-   
+
      
     </>
   );

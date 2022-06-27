@@ -1,14 +1,21 @@
+import Image from 'next/image';
 import React from 'react';
-function CircularButton({placeholder}){
+function CircularButton({placeholder,icon}){
 
     return (
       <>
       <div className="btn-container">
 
         <button className="btn" data-glitch={placeholder}>
-          <span className="glitch" data-glitch={placeholder}>
+         {placeholder && <span className="glitch max-w-max" data-glitch={placeholder}>
             {placeholder}
-          </span>
+          </span>}
+        {icon &&  <Image 
+          src={icon}
+          width={48}
+          height={48}
+          objectFit='contain'
+          />}
         </button>
       </div>
       </>

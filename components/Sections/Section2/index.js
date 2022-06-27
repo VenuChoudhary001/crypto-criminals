@@ -23,9 +23,9 @@ const ROADMAP = [
 const Section2 = () => {
   return (
     <>
-      <div className="grid gap-10">
+      <div className="grid gap-10 sec-2 relative ">
         <div className="container text-white sec2 flex flex-col items-center justify-center gap-6">
-          <div className=" text-4xl lg:text-6xl font-bold opacity-50 text-primary tracking-[12px]">
+          <div data-glitch="ROADMAP" className=" text-4xl lg:text-6xl font-bol opacity-50 text-black hero- relative tracking-[12px]">
             ROADMAP
           </div>
         </div>
