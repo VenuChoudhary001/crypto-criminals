@@ -6,7 +6,7 @@ function CircularButton({placeholder,icon}){
       <>
       <div className="btn-container">
 
-        <button className="btn" data-glitch={placeholder}>
+        <button className="btn"  data-glitch={placeholder}>
          {placeholder && <span className="glitch max-w-max" data-glitch={placeholder}>
             {placeholder}
           </span>}
@@ -27,7 +27,7 @@ export const SquareButton=({placeholder})=>{
   return <>
   
   <div className="sq-btn text-white">
-    <button className='btn h-[60px]' data-glitch={placeholder}>
+    <button className='btn h-[40px] md:h-[60px]' data-glitch={placeholder}>
       <span className="glitch" data-glitch={placeholder}>{placeholder}</span>
     </button>
   </div>

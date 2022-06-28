@@ -7,6 +7,9 @@ import GlitchedWriter, { wait, presets,} from "glitched-writer";
 import Section2 from "../components/Sections/Section2";
 import Section3 from "../components/Sections/Section3";
 import Social from "../components/Social";
+import Section4 from "../components/Sections/Section4";
+import Section5 from "../components/Sections/Section5";
+import Section6 from "../components/Sections/Section6";
 
 
 function Home() {
@@ -68,12 +71,15 @@ React.useEffect(() => {
   return (
     <>
      
-      <section className="home grid grid-rows auto-rows-auto gap-10  ">
+      <section className="home grid grid-rows auto-rows-auto gap  ">
 
         <Section1/>
         <Section2/>
         <Section3/>
+        <Section4/>
         <Social/>
+        <Section5/>
+        <Section6/>
         <Footer/>
        </section>
 

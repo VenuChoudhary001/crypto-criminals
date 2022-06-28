@@ -34,7 +34,7 @@ const Hero2 = () => {
         <div className=" mt-12 relative  lg:mt-0 flex flex-col justify-center ">
           <div
             data-glitch="CRYPTO CRIMINALS"
-            className="font-alpha hero text-blac   font-medium  flex text-5xl sm:text-6xl items-center justify-center md:text-8xl lg:text-9xl "
+            className="font-alpha hero- text-black tracking-[4px] md:tracking-[12px]  font-medium  flex text-5xl sm:text-6xl items-center justify-center md:text-8xl lg:text-9xl "
           >
             CRYPTO CRIMINALS
           </div>

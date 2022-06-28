@@ -6,6 +6,14 @@ import Modal from "./Modal";
 const Navbar = () => {
   const { magic, noMagic } = React.useContext(GLOBAL_CONTEXT);
   const [show,setShow]=React.useState(false);
+
+  const [size,setSize]=React.useState(60);
+
+  React.useEffect(()=>{
+   if(window.innerWidth < 600){
+    setSize(40)
+   }
+  },[])
   return (
     <>
       <div className=" bg-dark z-50 fixed w-full top-0 left-0 backdrop-blur-sm">
@@ -14,8 +22,8 @@ const Navbar = () => {
             <div className="block md:hidden mr-4 ">
               <Image
                 src="/icons/menu.svg"
-                width={24}
-                height={24}
+                width={22}
+                height={22}
                 layout="intrinsic"
                 objectFit="contain"
                 alt=""
@@ -24,8 +32,8 @@ const Navbar = () => {
             <Image
               src={"/icons/logo.svg"}
               priority
-              width={60}
-              height={60}
+              width={size}
+              height={size}
               objectFit="contain"
               layout="intrinsic"
               alt=""

@@ -7,16 +7,16 @@ const Section3 = () => {
   const [show, setShow] = React.useState(false);
   return (
     <>
-      <div className="sec-3 ">
+      <div className="sec-3">
         <div className="grid grid-cols-1 md:grid-cols-6">
-          <div className="col-span-4 p-4 max-w-[820px] relative gap-4 flex flex-col items-center md:items-start ">
+          <div className="col-span-4 p-4 py-8 max-w-[820px] relative gap-4 flex flex-col items-center md:items-start ">
             <div
               data-glitch="ORIGINS"
               className=" text-4xl lg:text-6xl font-bol opacity-50 text-black hero- relative tracking-[12px]"
             >
               ORIGINS
             </div>
-            <div className="info text-white opacity-60">
+            <div className="info text-white  opacity-60">
               {`You casually recline in the back seat of your armored car. The
               spreadsheet on your encrypted computer stares back at you. The
               profits it shows are staggering. In this month alone, you
