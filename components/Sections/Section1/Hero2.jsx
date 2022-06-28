@@ -30,7 +30,7 @@ const Hero2 = () => {
    }, []);
   return (
     <>
-      <div className="container min-h-screen text-center flex items-center justify-center flex-col relative  text-white ">
+      <div className="container  min-h-screen text-center flex items-center justify-center flex-col relative  text-white ">
         <div className=" mt-12 relative  lg:mt-0 flex flex-col justify-center ">
           <div
             data-glitch="CRYPTO CRIMINALS"
