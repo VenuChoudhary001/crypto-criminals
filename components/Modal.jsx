@@ -18,6 +18,7 @@ const Modal = ({ title, info, show, setShow }) => {
             width={80}
             height={80}
             layout="intrinsic"
+            alt=""
           />
           <div className="absolute right-10 top-10">
             <Image
@@ -26,6 +27,7 @@ const Modal = ({ title, info, show, setShow }) => {
               height={20}
               layout="intrinsic"
               onClick={() => setShow(!show)}
+              alt=''
             />
           </div>
           <div

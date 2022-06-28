@@ -14,6 +14,7 @@ function CircularButton({placeholder,icon}){
           src={icon}
           width={48}
           height={48}
+          alt=''
           objectFit='contain'
           />}
         </button>

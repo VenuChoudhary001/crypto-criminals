@@ -52,6 +52,7 @@ const Hero2 = () => {
               width={size.x}
               height={size.y}
               className="mask-3"
+              alt=''
             />
             <Image
               layout="intrinsic"
@@ -59,6 +60,7 @@ const Hero2 = () => {
               width={size.x}
               height={size.y}
               className="mask-4"
+              alt=''
             />{" "}
           </div>
         </div>
@@ -72,6 +74,7 @@ const Hero2 = () => {
                 height={200}
                 className="mask-3"
                 objectFit="contain"
+                alt=''
               />
          
             <Image
@@ -81,6 +84,7 @@ const Hero2 = () => {
               height={200}
               className="mask-4"
               objectFit="contain"
+              alt=''
             />{" "}
           </div>
         </div>
