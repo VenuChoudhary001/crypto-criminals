@@ -12,6 +12,7 @@ import Section5 from "../components/Sections/Section5";
 import Section6 from "../components/Sections/Section6";
 
 
+
 function Home() {
  
   const [show,setShow]=React.useState({
@@ -67,23 +68,29 @@ React.useEffect(() => {
   //     </>
   //   );
   // }
-   
+ 
   return (
     <>
-     
       <section className="home grid grid-rows auto-rows-auto gap  ">
+        {/* Landing Section */}
+        <Section1 />
+        {/* Roadmap */}
+        <Section2 />
+        
+        {/* Media  */}
+        <Section4 />
+        {/* Origin Story */}
+        <Section3 />
 
-        <Section1/>
-        <Section2/>
-        <Section3/>
-        <Section4/>
-        <Social/>
-        <Section5/>
-        <Section6/>
-        <Footer/>
-       </section>
-
-     
+        {/* Social media links */}
+        <Social />
+        {/* Founders */}
+        <Section5 />
+        {/* FAQ */}
+        <Section6 />
+        {/* Footer */}
+        <Footer />
+      </section>
     </>
   );
 }

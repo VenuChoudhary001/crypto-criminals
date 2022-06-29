@@ -6,7 +6,7 @@ import Modal from "./Modal";
 const Navbar = () => {
   const { magic, noMagic } = React.useContext(GLOBAL_CONTEXT);
   const [show,setShow]=React.useState(false);
-
+  const [give,setShowGive]=React.useState(false);
   const [size,setSize]=React.useState(60);
 
   React.useEffect(()=>{
@@ -40,7 +40,7 @@ const Navbar = () => {
               className="z-30"
             />
 
-            <div className="text-white tracking-wide hidden text-[14px] font-medium md:flex space-x-12">
+            <div className="text-white tracking-wide hidden text-[12px] lg:text-[14px] font-medium md:flex space-x-8">
               <div
                 onMouseEnter={magic}
                 onMouseLeave={noMagic}
@@ -70,14 +70,23 @@ const Navbar = () => {
               >
                 POINT SYSTEM
               </div>
+              <div
+                onMouseEnter={magic}
+                onMouseLeave={noMagic}
+                className="cursor-pointer hover:text-secondary"
+                onClick={() => setShowGive(true)}
+              >
+                GIVEAWAY
+              </div>
             </div>
           </div>
           <SquareButton placeholder={"ADD A CRIMINAL"} />
         </div>
       </div>
-   {show &&   <Modal
-        title={"THE POINT SYSTEM"}
-        info={` If you collect ten points, you can mint a new Crypto Criminal! We
+      {show && (
+        <Modal
+          title={"THE POINT SYSTEM"}
+          info={` If you collect ten points, you can mint a new Crypto Criminal! We
             will unlock this feature approximately 30 days after the completion
             of the public sale. If you were whitelisted during our presale, you
             would use this feature 24 hours before those who purchased during
@@ -90,9 +99,31 @@ const Navbar = () => {
             will have points too. Which you can use immediately. Lastly, there
             will be ten bonus Crypto Criminals with a point value of ten. Keep
             in mind there will be 11111 for sale and 11111 available for free.`}
-            show={show}
-            setShow={setShow}
-      />}
+          show={show}
+          setShow={setShow}
+        />
+      )}
+
+      {give && (
+        <Modal
+          title={"GIVEAWAY"}
+          info={` On occasion we will give away Crypto Criminal NFT’s through
+              Discord competitions or Twitter spaces. Check our website and
+              social sites for the opportunity to win.Following the sale of
+              our 3333rd Crypto Criminal NFT three owners will win a Playstation
+              5 and the most current Apple iPhone. Additionally, one owner will
+              be selected to join the Crypto Criminal founders in our next
+              trailer. The sale of the 7777th Crypto Criminal NFT will result
+              in the giveaway of either $20,000 USD or a Rolex watch. -Upon the
+              sale of the final Crypto Criminal NFT, number 11111, a giveaway
+              for a one kilogram brick of platinum will be held. The platinum
+              brick will be embossed with the Crypto Criminals logo as well as
+              our tagline “No Face, No Case”. Lastly a beeple style art piece
+              containing all minted Crypto Criminal NFT’s will be given away.`}
+              show={give}
+              setShow={setShowGive}
+        />
+      )}
     </>
   );
 };

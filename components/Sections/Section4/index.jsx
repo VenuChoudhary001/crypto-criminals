@@ -17,7 +17,7 @@ const Section4 = () => {
             >
               MEDIA
             </div>
-           <div className="grid max-w-[1000px] gap-10 grid-cols-1 md:grid-cols-3">
+           <div className="grid max-w-[1000px] gap-10 grid-cols-1 lg:grid-cols-3">
 
             <Card />
             <Card />

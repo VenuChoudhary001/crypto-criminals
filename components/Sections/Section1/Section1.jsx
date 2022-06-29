@@ -7,7 +7,7 @@ const Section1 = () => {
     <>
       <div className="relative  sec-1  ">
        
-      <Navbar />
+   
         <div className="over  relative">
      
           <Hero2 />

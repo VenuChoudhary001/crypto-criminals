@@ -33,7 +33,7 @@ const Section2 = () => {
           <div
             className="tl-item "
             style={{
-              background: "url(/images/phase-1.png) no-repeat center/cover",
+              background: "url(/images/founders-bg.png) no-repeat center/cover",
             }}
           >
             <div className="tl-year">
@@ -61,7 +61,7 @@ const Section2 = () => {
           <div
             className="tl-item "
             style={{
-              background: "url(/images/phase-2.png) no-repeat center/cover",
+              background: "url(/images/founders-bg.png) no-repeat center/cover",
             }}
           >
             <div className="tl-year">

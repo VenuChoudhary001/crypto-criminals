@@ -13,24 +13,32 @@ const Hero2 = () => {
     }
      window.scrollTo(0, 0); // Scrolls to top
      gsap.from(".mask-3", {
-       y: 400,
+       x: 600,
+       y:100,
        opacity: 0.1,
        duration: 2,
        ease: "ease.out",
+       delay:0.3
      });
      gsap.from(".mask-4", {
        y: 300,
        opacity: 0.1,
        duration: 2,
        ease: "ease.out",
+       delay: 0.3,
      });
-     
-
+       gsap.from(".mask-5", {
+         y: -400,
+         opacity: 0.1,
+         duration: 2,
+         ease: "ease.out",
+         delay: 0.3,
+       });
     
    }, []);
   return (
     <>
-      <div className="container  min-h-screen text-center flex items-center justify-center flex-col relative  text-white ">
+      <div className="  min-h-screen text-center flex items-center justify-center flex-col relative  text-white ">
         <div className=" mt-12 relative  lg:mt-0 flex flex-col justify-center ">
           <div
             data-glitch="CRYPTO CRIMINALS"
@@ -38,7 +46,7 @@ const Hero2 = () => {
           >
             CRYPTO CRIMINALS
           </div>
-          <div className="font-medium text-[14px] md:text-xl ">
+          <div className="font-medium italic text-[14px] md:text-xl ">
             11111 unique NFT Crypto Criminal masks worn by the outlaws of The
             Metaverse. No Face No Case.
           </div>
@@ -66,23 +74,13 @@ const Hero2 = () => {
         </div>
         <div className="absolute bottom-0 md:hidden block">
           <div className="relative block">
-            {/* <div className="absolute left-0"> */}
-              <Image
-                layout="intrinsic"
-                src={"/images/mask-3.png"}
-                width={280}
-                height={200}
-                className="mask-3"
-                objectFit="contain"
-                alt=''
-              />
-         
+          
             <Image
               layout="intrinsic"
               src={"/images/mask-4.png"}
               width={280}
               height={200}
-              className="mask-4"
+              className="mask-4 "
               objectFit="contain"
               alt=''
             />{" "}

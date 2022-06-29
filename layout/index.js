@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
 
 
 export const GLOBAL_CONTEXT = React.createContext();
@@ -53,6 +54,7 @@ const Layout = ({ children }) => {
       />
 
       <GLOBAL_CONTEXT.Provider value={{ magic: textEnter, noMagic: textLeave }}>
+        <Navbar/>
         {children}
        
       </GLOBAL_CONTEXT.Provider>

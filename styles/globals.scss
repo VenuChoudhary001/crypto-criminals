@@ -90,8 +90,7 @@ body {
   &::before{
     color: #0ff;
     filter: none;
-   
-    
+  
   }
   &::after{
      content: attr(data-glitch);
@@ -102,6 +101,33 @@ body {
     color: #d00000;
     z-index: -2;
     transform: translate(2px, 2px);
+  }
+  &:hover{
+    &::before{
+ @keyframes glitch {
+           0% {
+             transform: translate(0);
+           }
+           20% {
+             transform: translate(-2.2px, 2.2px);
+           }
+           40% {
+             transform: translate(-2.2px, -2.2px);
+           }
+           60% {
+             transform: translate(2.2px, 2.2px);
+           }
+           80% {
+             transform: translate(2.2px, -2.2px);
+           }
+           to {
+             transform: translate(0);
+           }
+         }
+         animation: glitch 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+         infinite;
+    
+    }
   }
 }
 .sec-1 {
@@ -135,6 +161,7 @@ body {
   height: 100%;
   object-fit: contain;
   .hero-{
+    filter: drop-shadow(0 0 2px);
     &::before{
 
       @keyframes glitch {
@@ -614,4 +641,32 @@ body {
 }
 .social{
   background-color: rgba(0 255 255 / 0.5);
+}
+
+.loader{
+  svg{
+    animation: secondAnimation 2s linear forwards infinite;
+     @keyframes secondAnimation {
+        0% {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+        }
+        30% {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 200;
+        }
+        50% {
+            stroke-dasharray: 60;
+            stroke-dashoffset: 400;
+        }
+        80% {
+            stroke-dasharray: 30;
+            stroke-dashoffset: 200;
+        }
+        100% {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+        }
+    }
+  }
 }
