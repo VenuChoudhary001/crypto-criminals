@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar.jsx";
 
 
 export const GLOBAL_CONTEXT = React.createContext();

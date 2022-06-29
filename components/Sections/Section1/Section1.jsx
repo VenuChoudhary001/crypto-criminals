@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../../Navbar";
-import Image from "next/image";
 import Hero2 from "./Hero2";
 const Section1 = () => {
   return (

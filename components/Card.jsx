@@ -1,42 +1,31 @@
 import Image from "next/image";
 import React from "react";
+import { GLOBAL_CONTEXT } from "../layout";
 import Modal from "./Modal";
-
+import { motion ,useAnimation} from "framer-motion";
 const Card = () => {
+  const {magic,noMagic}=React.useContext(GLOBAL_CONTEXT)
   return (
     <>
-      {/* <div className="flex  flex-col bg-black  gap-6 max-w-[400px] md:max-w-[300px] w-full"> */}
-      {/* <div className="flex flex-col items-center justify-center w-full h-[200px] bg-gray-500 relative">
-          <Image src={"/images/thumbs-1.png"} alt='' layout="fill" objectFit="cover" />
-          <div className="">
-            <Image
-              src={"/icons/yt.svg"}
-              width={48}
-              height={48}
-              layout="intrinsic"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="text-white p-2 text-center font-normal">
-          A Crypto Criminal Presentation
-        </div> */}
       <div className="grid place-items-center grid-cols-1">
-        <div className="relative ">
+        <div className="relative overflow-hidden ">
           <Image
-            src={"/images/thumbs-1.png"}
+            src={"/images/card_3.png"}
             alt=""
             layout="intrinsic"
-            objectFit="cover"
+            objectFit="contain"
             width={300}
-            height={280}
-            className="rounded-xl absolute top-0 left-0"
+            height={180}
+            className="round absolute top-0 left-0"
           />
         </div>
 
-        <div className="relative px-4 -mt-16 max-w-[280px] ">
-          <div className="bg-black flex flex-col gap-2 text-white p-6 rounded-lg shadow-lg">
-            <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncat">
+        <div className="relative card border-soli border-2 border-white  -mt-8 max-w-[300px] ">
+          <div className=" card-bg flex flex-col gap-2 text-white py-6 rounded-lg shadow-lg">
+            <h4
+              data-glitch="A Crypto Criminal Presentation"
+              className="hero mt-1 text-cyan-400 opacity-50 tracking-widest text-xl font-bold uppercase leading-tight truncat"
+            >
               A Crypto Criminal Presentation
             </h4>
             <div className="flex justify-between items-center">
@@ -46,6 +35,8 @@ const Card = () => {
                 height={36}
                 layout="intrinsic"
                 alt=""
+                onMouseEnter={magic}
+                onMouseLeave={noMagic}
               />
               <Image
                 src={"/icons/arrow.svg"}
@@ -53,6 +44,8 @@ const Card = () => {
                 height={24}
                 layout="intrinsic"
                 alt=""
+                onMouseEnter={magic}
+                onMouseLeave={noMagic}
               />
             </div>
           </div>
@@ -63,61 +56,72 @@ const Card = () => {
   );
 };
 
-export const ProfileCard = () => {
+export const ProfileCard = ({profile}) => {
   const [show,setShow]=React.useState(false);
+  const control=useAnimation();
+  const content = (
+    <>
+      <div className="flex flex-col gap-1">
+        <div className="">
+          <span className="font-semibold text-lg">Specialities </span> :{" "}
+          {profile.specs}
+        </div>
+        <div className="">
+          <span className="font-semibold text-lg">Crimes </span> :
+          {profile.crime}
+        </div>
+      </div>
+    </>
+  );
   return (
     <>
-      <div className="bg-white rounded-md mt-8 bg-gray-800 shadow-lg">
-        <div className=" flex  flex-col px-4 leading-none max-w-4xl">
-          <div className="flex-none w-56 h-72 relative rounded-md shadow-2xl transform -translate-y-4 border-4 border-solid border-gray-300 shadow-lg">
+      <motion.div className="bg-white rounded-md mt-8  bg-slate-900 shadow-lg">
+        <div className=" flex  flex-col xl:flex-row px-4 leading-none max-w-4xl">
+          <motion.div animate={control} className="flex-none w-56 h-72 relative rounded-md shadow-2xl transform -translate-y-4 border-4 border-solid border-gray-300 shadow-lg">
             <Image
-              src={"/images/tcg.png"}
+              src={profile.img}
               layout="intrinsic"
               objectFit="cover"
-             alt=""
+              alt=""
               width={224}
               height={288}
             />
-          </div>
+          </motion.div>
 
-          <div className="flex-col items-center justify-center text-center text-gray-300">
-            <p className="pt-4 text-2xl font-bold">The Crazy Geek</p>
+          <div className="flex-col items-center max-w-[300px justify-center text-center text-gray-300">
+            <p className="pt-4 text-2xl text-primary 0 font-bold">{profile.title}</p>
             <hr className="hr-text" data-content="" />
-            <div className="text-md flex justify-between px-4 my-2">
-              <span className="font-bold">Origin : Greece | Position : Boss</span>
-              <span className="font-bold"></span>
+            <div className="text-md flex flex-col gap-1 justify-between px-4 my-2">
+              <span className="font-semibold">Origin : {profile.origin} </span>
+              <span className="font-semibold"> Position : {profile.position}</span>
             </div>
             <span
               onClick={() => setShow(true)}
-              className=" font-bold block hover:ubderline cursor-pointer"
+              className="xl:hidden font-bold block hover:ubderline cursor-pointer"
             >
               More info
             </span>
-            {/* <p className="hidden md:block px-4 my-4 text-[16px] text-left">
+            <p className="hidden xl:block px-4 my-4 text-[16px] text-left">
               <span className="font-bold">Specialities</span> : Networking and
               Staying in Trouble
             </p>
-            <p className="hidden md:block px-4 my-4 text-[16px] text-left">
+            <p className="hidden xl:block tracking-wide leading-5 px-4 my-4 text-[16px] text-left">
               <span className="font-bold"> Crimes</span> : Transnational Drug
               Trafficking, Labor Racketeering, Bid Rigging, Murder, Breaking and
               Entering, Driving Under the Influence, Illegal possession of
               fireworks, Illegal operation of a dirt- bike on a public road.
-            </p> */}
+            </p>
             <p className="flex text-md px-4 my-2"></p>
           </div>
         </div>
-      </div>
+      </motion.div>
       {show && (
         <Modal
-          title={"The Crazy Geek"}
-          info={`Specialities:Networking and
-              Staying in Trouble.
-              Crimes:Transnational Drug
-              Trafficking, Labor Racketeering, Bid Rigging, Murder, Breaking and
-              Entering, Driving Under the Influence, Illegal possession of
-              fireworks, Illegal operation of a dirt- bike on a public road.`}
+          title={profile.title}
+          info={content}
           show={show}
           setShow={setShow}
+          img={profile.img}
         />
       )}
     </>

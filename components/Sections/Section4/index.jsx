@@ -7,7 +7,6 @@ const Section4 = () => {
     <>
       <div className="sec-4">
         <div className=" relative py-4">
-
           <div className="w-full md:p-4 flex flex-col items-center justify-center gap-10">
             <div
               data-glitch="MEDIA"
@@ -17,13 +16,12 @@ const Section4 = () => {
             >
               MEDIA
             </div>
-           <div className="grid max-w-[1000px] gap-10 grid-cols-1 lg:grid-cols-3">
-
-            <Card />
-            <Card />
-            <Card />
-           
-           </div>
+            <div className="grid max-w-[1000px] gap-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+              <Card />
+              <Card />
+              <Card />
+              
+            </div>
           </div>
         </div>
       </div>

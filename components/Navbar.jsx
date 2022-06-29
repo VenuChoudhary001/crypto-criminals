@@ -3,12 +3,14 @@ import React from "react";
 import { GLOBAL_CONTEXT } from "../layout";
 import { SquareButton } from "./Button";
 import Modal from "./Modal";
+import {motion} from 'framer-motion'
+import Social from "./Social";
 const Navbar = () => {
   const { magic, noMagic } = React.useContext(GLOBAL_CONTEXT);
   const [show,setShow]=React.useState(false);
   const [give,setShowGive]=React.useState(false);
   const [size,setSize]=React.useState(60);
-
+  const [showMenu,setShowMenu]=React.useState(false);
   React.useEffect(()=>{
    if(window.innerWidth < 600){
     setSize(40)
@@ -27,6 +29,7 @@ const Navbar = () => {
                 layout="intrinsic"
                 objectFit="contain"
                 alt=""
+                onClick={() => setShowMenu(true)}
               />
             </div>
             <Image
@@ -120,9 +123,81 @@ const Navbar = () => {
               brick will be embossed with the Crypto Criminals logo as well as
               our tagline “No Face, No Case”. Lastly a beeple style art piece
               containing all minted Crypto Criminal NFT’s will be given away.`}
-              show={give}
-              setShow={setShowGive}
+          show={give}
+          setShow={setShowGive}
         />
+      )}
+      {showMenu && (
+        <div className="w-full h-screen top-0 flex  justify-center fixed z-[60]  min-h-screen bg-light backdrop-blur">
+          <motion.div
+            initial={{ y: 1000, scale: 0.2 }}
+            animate={{ y: 0, type: "tween", scale: 1 }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="p-4 flex z-[70] flex-col relative w-full min-h-screen shadow-xl gap-2 bg-extraDark md:rounded-lg m-auto max-w-[1000px]"
+          >
+            <Image
+              src={"/icons/logo.svg"}
+              width={80}
+              height={80}
+              layout="intrinsic"
+              alt=""
+            />
+            <div className="absolute right-10 top-10">
+              <Image
+                src={"/icons/close.svg"}
+                width={20}
+                height={20}
+                layout="intrinsic"
+                onClick={() => setShowMenu(!showMenu)}
+                alt=""
+              />
+            </div>
+            <div className="flex nav flex-col ">
+              <div onClick={()=>{setShowMenu(false);noMagic()}} className="text-white tracking-wide flex flex-col gap-10 items-center justify-center h-full text-[16px] lg:text-[14px] font-medium ">
+                <div
+                  onMouseEnter={magic}
+                  onMouseLeave={noMagic}
+                  className="cursor-pointer hover:text-secondary"
+                >
+                  HOME
+                </div>
+                <div
+                  onMouseEnter={magic}
+                  onMouseLeave={noMagic}
+                  className="cursor-pointer hover:text-secondary"
+                >
+                  CRIME PAPER
+                </div>
+                <div
+                  onMouseEnter={magic}
+                  onMouseLeave={noMagic}
+                  className="cursor-pointer hover:text-secondary"
+                >
+                  CATALOGUE
+                </div>
+                <div
+                  onMouseEnter={magic}
+                  onMouseLeave={noMagic}
+                  className="cursor-pointer hover:text-secondary"
+                  onClick={() => setShow(true)}
+                >
+                  POINT SYSTEM
+                </div>
+                <div
+                  onMouseEnter={magic}
+                  onMouseLeave={noMagic}
+                  className="cursor-pointer hover:text-secondary"
+                  onClick={() => setShowGive(true)}
+                >
+                  GIVEAWAY
+                </div>
+                <Social/>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       )}
     </>
   );

@@ -3,6 +3,54 @@ import ReactPlayer from "react-player/lazy";
 import { GLOBAL_CONTEXT } from '../../../layout';
 import Button from '../../Button';
 import { ProfileCard } from '../../Card';
+
+const FOUNDERS = [
+  {
+    title: "The Crazy Geek",
+    origin: "Greece",
+    position: "BOSS",
+    specs: "Networking and Staying in Trouble",
+    crime:
+      "Transnational Drug Trafficking, Labor Racketeering, Bid Rigging, Murder, Breaking and Entering, Driving Under the Influence, Illegal possession of fireworks, Illegal operation of a dirt- bike on a public road.",
+    img: "/images/tcgc.png",
+  },
+  {
+    title: "Mr. Diamondhands",
+    origin: "Sierra Leone",
+    position: "Consigliere",
+    specs: "Long Term Growth of all Business Assets and Fitness",
+    crime:
+      "Racketeering, Money Laundering, Wire Fraud, mbezzlement, and suspected involvement in 23 murders.",
+    img: "/images/diamond-hands.png",
+  },
+  {
+    title: "Brahtoshi",
+    origin: "Ireland",
+    position: "Underboss",
+    specs: "Unsuccessful Car Bombings",
+    crime:
+      "Loansharking, Murder, Weapons Trafficking, Cigarette Smuggling, Gambling",
+    img: "/images/brahtoshi.png",
+  },
+  {
+    title: "El Tiguere",
+    origin: "United States",
+    position: "Soldier",
+    specs: "Extreme Violence with a flair for Creativity",
+    crime: "Murder, Extortion, Kidnapping",
+    img: "/images/el-founder.png",
+  },
+  {
+    title: "01001101",
+    origin: "Unknown",
+    position: "Associate",
+    specs: "Surveillance, Counter-Surveillance, and Anti-Surveillance",
+    crime: "Ransomware Attacks and Extortion, IP Theft, DOSS Attacks",
+    img: "/images/01001101.png",
+  },
+];
+
+
 const Section5 = () => {
      const {magic,noMagic}=React.useContext(GLOBAL_CONTEXT)
      
@@ -18,16 +66,10 @@ const Section5 = () => {
           >
             MEET THE FOUNDERS
           </div>
-          <div className="grid-cols-1 gap-8 place-items-center  lg:grid-cols-3 place-items-center container grid">
-            <ProfileCard />
-            <ProfileCard />
-            <ProfileCard />
+          <div className="grid-cols-1 gap-8 place-items-center md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-2 place-items-center container grid">
+           {FOUNDERS.map((item,i)=><ProfileCard key={i} profile={item} />)}
           </div>
-          <div className="flex flex-col lg:flex-row items-center gap-10 ">
-            <ProfileCard />
-            <ProfileCard />
-            
-          </div>
+         
         </div>
       </div>
     </>

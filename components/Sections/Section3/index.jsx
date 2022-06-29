@@ -16,7 +16,7 @@ const Section3 = () => {
             >
               ORIGINS
             </div>
-            <div className="info text-white  opacity-60">
+            <div className="info text-white  opacity-60 ">
               {`You casually recline in the back seat of your armored car. The
               spreadsheet on your encrypted computer stares back at you. The
               profits it shows are staggering. In this month alone, you
@@ -47,7 +47,7 @@ const Section3 = () => {
               <CircularButton icon={"/icons/yt.svg"} />
             </div>
             <Image
-              src={"/images/thumbs-1.png"}
+              src={"/images/card_2.png"}
               layout="fill"
               alt=""
               objectFit="cover"
