@@ -34,9 +34,9 @@ const Card = () => {
           />
         </div>
 
-        <div class="relative px-4 -mt-16 max-w-[280px] ">
-          <div class="bg-black flex flex-col gap-2 text-white p-6 rounded-lg shadow-lg">
-            <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncat">
+        <div className="relative px-4 -mt-16 max-w-[280px] ">
+          <div className="bg-black flex flex-col gap-2 text-white p-6 rounded-lg shadow-lg">
+            <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncat">
               A Crypto Criminal Presentation
             </h4>
             <div className="flex justify-between items-center">
@@ -52,6 +52,7 @@ const Card = () => {
                 width={24}
                 height={24}
                 layout="intrinsic"
+                alt=""
               />
             </div>
           </div>
