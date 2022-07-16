@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       width: 100,
       x: mousePosition.x - 50,
       y: mousePosition.y - 50,
-      backgroundColor: "#Dc3c44",
+      backgroundColor: "#00EEEE",
       mixBlendMode: "difference",
     },
   };
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
       <motion.div
         variants={variant}
         animate={mouseVariant}
-        className="cursor"
+        className="cursor anim-glitch"
       />
 
       <GLOBAL_CONTEXT.Provider value={{ magic: textEnter, noMagic: textLeave }}>

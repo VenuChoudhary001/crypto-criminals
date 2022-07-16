@@ -6,12 +6,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#000311",
-        secondary: "#DC3C44",
-        offWhite: "#586173",
+        primary: "#FF0000",
+        secondary: "#DF0431",
+        dark: "rgba(0 0 0 / 0.45)",
+        lightBlue: "#0566C2",
       },
       fontFamily: {
         urbanist: ["Urbanist", "sans-serif"],
+        raleway: ["Raleway"],
+        anton: ["Anton"],
+        oswald: ["Oswald"],
+        hazaru: ["Hazaru", "Anton", "sans-serif"],
       },
     },
   },

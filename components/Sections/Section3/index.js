@@ -1,47 +1,27 @@
 import React from "react";
-import { GLOBAL_CONTEXT } from "../../../layout";
+import Card from "../../Card";
 
 const Section3 = () => {
-    const {magic,noMagic}=React.useContext(GLOBAL_CONTEXT);
-  const roadMap = [
-    {
-      title: "PHASE I",
-      sub: "The sale of 3333 Crypto Criminal NFT’s available for.069 ETH. Upon completion of our 3333rd sale three NFT owners will win a Playstation 5 and an Apple iPhone 13. One owner will be selected to join the Crypto Criminal founders in our next trailer",
-    },
-    {
-      title: "PHASE I",
-      sub: "The sale of 3333 Crypto Criminal NFT’s available for.069 ETH. Upon completion of our 3333rd sale three NFT owners will win a Playstation 5 and an Apple iPhone 13. One owner will be selected to join the Crypto Criminal founders in our next trailer",
-    },
-    {
-      title: "PHASE I",
-      sub: "The sale of 3333 Crypto Criminal NFT’s available for.069 ETH. Upon completion of our 3333rd sale three NFT owners will win a Playstation 5 and an Apple iPhone 13. One owner will be selected to join the Crypto Criminal founders in our next trailer",
-    },
-    {
-      title: "PHASE I",
-      sub: "The sale of 3333 Crypto Criminal NFT’s available for.069 ETH. Upon completion of our 3333rd sale three NFT owners will win a Playstation 5 and an Apple iPhone 13. One owner will be selected to join the Crypto Criminal founders in our next trailer",
-    },
-    {
-      title: "PHASE I",
-      sub: "The sale of 3333 Crypto Criminal NFT’s available for.069 ETH. Upon completion of our 3333rd sale three NFT owners will win a Playstation 5 and an Apple iPhone 13. One owner will be selected to join the Crypto Criminal founders in our next trailer",
-    },
-  ];
-
+ 
   return (
     <>
-      <div className="container flex flex-col space-y-4">
-        <div className="lg:text-6xl text-5xl font-bold text-white text-center">
+      <div className="container flex flex-col gap-10">
+        <div className="text-3xl  md:text-7xl space-y-2 text-white max-w-max font-hazaru">
           ROAD<span className="text-secondary">MAP</span>
+          {/* <div className=" relative line h-[10px] border-t-2 border-t-secondary  border-solid"></div> */}
         </div>
-        <div className="road-map">
-          {roadMap.map((item, i) => (
-            <div
-              className="text-lg font-semibold road-map-item flex flex-col"
-              key={i}
-            >
-              <span className="text-secondary text-2xl font-bold" onMouseEnter={magic} onMouseLeave={noMagic}>{item.title}</span>
-              {item.sub}
-            </div>
-          ))}
+        <div className="flex flex-col items-center justify-center">
+          <Card />
+        </div>
+        <div className="md:flex hidden text-lg justify-evenly">
+          <div className="text-white font-oswald border-t-2 border-b-2 border-secondary border-solid">
+            PHASE I
+          </div>
+          <div className="text-white font-oswald">PHASE II</div>
+          <div className="text-white font-oswald">PHASE III</div>
+          <div className="text-white font-oswald">PHASE IV</div>
+          <div className="text-white font-oswald">PHASE V</div>
+          <div className="text-white font-oswald">PHASE VI</div>
         </div>
       </div>
     </>

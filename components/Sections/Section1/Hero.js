@@ -1,67 +1,49 @@
 import React from "react";
-import Image from "next/image";
 import Button from "../../Button";
-import Social from "../../Social";
 import { motion } from "framer-motion";
 import { GLOBAL_CONTEXT } from "../../../layout";
+import  GlitchedWriter ,{wait,presets} from 'glitched-writer'
 function Hero() {
   const { magic, noMagic } = React.useContext(GLOBAL_CONTEXT);
-  const [size,setSize]=React.useState({x:800,y:700});
+  const ref=React.useRef(null);
+  const ref2=React.useRef(null);
+  React.useEffect(() => {
+    console.clear();
+    const writer = new GlitchedWriter(
+      ref.current,
+      { ...presets.encrypted },
+      (string, writerData) => {}
+    );
+    async function go() {
+      await writer.write("Crypto Criminals");
+ 
+       const newWriter= new GlitchedWriter(ref2.current,{...presets.encrypted},(data,err)=>{}) 
+      await wait(1000)
+      await newWriter.write(" 11111 unique NFT Crypto Criminal masks worn by the outlaws of The Metaverse. No Face No Case.")
 
-
-  React.useEffect(()=>{
-    if(window.innerWidth <=768){
-      setSize({x:400,y:330})
     }
-  },[])
+    go();
+  }, []);
+
+
 
   return (
     <>
-      <div className="container sm:h-[768px] justify-items-center text-center lg:text-left  relative hero grid  grid-cols-1 lg:grid-cols-2 items-center  text-white ">
-        
-        <motion.div className=" mt-12 lg:mt-0 flex flex-col lg:gap-4 gap-6 ">
+      <div className="container h-screen flex items-center justify-cente  relative  text-white ">
+        <motion.div className=" mt-12 relative  lg:mt-0 flex flex-col justify-center items-centr lg:gap-4 gap-4 ">
           <div
             onMouseEnter={magic}
             onMouseLeave={noMagic}
-            className="font-normal text-2xl md:text-3xl  lg:text-2xl xl:text-4xl "
+            className="font-hazaru hero  font-thin text-5xl sm:text-6xl  md:text-8xl lg:text-7xl "
+           ref={ref}
           >
-            &nbsp;INTRODUCING
+           {/* CRYPTO CRIMINALS */}
           </div>
-          <h1
-            onMouseEnter={magic}
-            onMouseLeave={noMagic}
-            className="font-bold md:font-bold text-4xl md:text-6xl lg:text-4xl xl:text-5xl 2xl:text-7xl"
-          >
-            CRYPTO <span className="text-secondary">CRIMINALS</span>
-          </h1>
-          <div className="font-normal text-lg lg:text-sm xl:text-lg">
-            &nbsp;11111 unique NFT Crypto Criminal masks worn by the outlaws of
-            The Metaverse.{" "}
-            <span className="font-bold">No Face &nbsp;No Case.</span>
+          <div ref={ref2} className="font-bold font-urbanist max-w-[800px]   md:text-2xl ">
+           
           </div>
           <Button placeholder={"mint your criminals now"} />
         </motion.div>
-        <motion.div
-          className="sm:block"
-          animate={{ y: [-20, 0, -20] }}
-          transition={{
-            duration: 3,
-            yoyo: Infinity,
-          }}
-        >
-          <Image
-            src="/images/test.png"
-            width={size.x}
-            height={size.y}
-            layout="intrinsic"
-            objectFit="contain"
-            priority
-            alt=""
-          />
-        </motion.div>
-        <div className="absolute right-0 hidden lg:block width-36 ">
-          <Social style={"col"}/>
-        </div>
       </div>
     </>
   );
